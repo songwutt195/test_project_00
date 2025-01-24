@@ -1,12 +1,15 @@
 import streamlit as st
-import pandas as pd
+import datetime
 
 st.set_page_config(layout="wide")
 st.title('Test Streamlit')
 
-txt = st.text_area(
-    "Text to analyze",
-    "management of analytics and datatechnologies "*5,
-)
+result1 = st.button("click me1!")
+if result1:
+    st.write('you click on 1')
 
-st.write(f"You wrote {len(txt)} characters.")
+result2 = st.button("click me2!", type="tertiary")
+if result1 & result2:
+    st.write('you click both')
+
+st.button("Reset", type="primary")
